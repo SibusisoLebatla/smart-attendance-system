@@ -1,12 +1,12 @@
-Title :The Architecture Side of the Snart Attendance System
+## Project Title: Smart Attendance Sysytem
 
-Overview:
+## Overview:
 
 The system allows both students and lectures to mark their presence using QR code or facial recognision while providing real-time tracking that can be viewed by students, lectures as well as the administrations.
 
 Technology behind:
 
-** Frontend:** HTML, CSS, JavaScript(React and React Native)<br>
+**Frontend:** HTML, CSS, JavaScript(React and React Native)<br>
 **Backend:** Node.js <br>
 **Database:** MySQL <br>
 **Authentication:** JWT for secure login<br>
@@ -16,7 +16,7 @@ Technology behind:
 
  Showing the different usage of the system from the perspective of Students, Lectures and Administrators.
 
-C4Context
+**C4Context**
   title Smart Attendance System - Context Diagram
   Enterprise_Boundary(b0, "School Network") {
     System(s1, "Smart Attendance System", "Manages student attendance")
@@ -29,7 +29,7 @@ C4Context
     p3 -> s1 : "Manages student records"
   }
   
-C4Container
+**C4Container**
   title Smart Attendance System - Container Diagram
   System_Boundary(sas, "Smart Attendance System") {
     Container(c1, "Frontend (React)", "User Interface")
@@ -45,7 +45,7 @@ C4Container
     c2 -> db : "Stores/Retrieves Data"
   }
 
-C4Component
+**C4Component**
   title Smart Attendance System - Component Diagram
   Container_Boundary(c2, "Backend (Node.js)") {
     Component(api, "API Controller", "Handles HTTP Requests")
