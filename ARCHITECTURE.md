@@ -18,8 +18,7 @@ The **Smart Attendance System** allows students to mark attendance using facial 
 The **Context Diagram** shows how different users interact with the system.  
 
 ```mermaid
-
-**C4Context**
+C4Context
   title Smart Attendance System - Context Diagram
   Enterprise_Boundary(b0, "School Network") {
     System(s1, "Smart Attendance System", "Manages student attendance")
@@ -31,8 +30,7 @@ The **Context Diagram** shows how different users interact with the system.
     p2 -> s1 : "Checks attendance logs"
     p3 -> s1 : "Manages student records"
   }
-  
-**C4Container**
+C4Container
   title Smart Attendance System - Container Diagram
   System_Boundary(sas, "Smart Attendance System") {
     Container(c1, "Frontend (React)", "User Interface")
@@ -47,8 +45,7 @@ The **Context Diagram** shows how different users interact with the system.
     c1 -> c2 : "API Requests (Login, Mark Attendance, View Records)"
     c2 -> db : "Stores/Retrieves Data"
   }
-
-**C4Component**
+C4Component
   title Smart Attendance System - Component Diagram
   Container_Boundary(c2, "Backend (Node.js)") {
     Component(api, "API Controller", "Handles HTTP Requests")
@@ -60,4 +57,3 @@ The **Context Diagram** shows how different users interact with the system.
     api -> attendance : "Processes QR Code / Face Data"
     attendance -> db : "Stores Attendance Records"
   }
-
