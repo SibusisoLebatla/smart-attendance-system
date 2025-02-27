@@ -1,4 +1,4 @@
-#Smart Attendance Sysytem
+## Project Title: Smart Attendance Sysytem
 
 ## Domain: System Management System
 
