@@ -6,11 +6,11 @@ The system allows both students and lectures to mark their presence using QR cod
 
 Technology behind:
 
-** Frontend:** HTML, CSS, JavaScript(React and React Native)
-**Backend:** Node.js 
-**Database:** MySQL
-**Authentication:** JWT for secure login
-**Hosting:** Github and Vercel for frontend , AWS fro backend
+** Frontend:** HTML, CSS, JavaScript(React and React Native)<br>
+**Backend:** Node.js <br>
+**Database:** MySQL <br>
+**Authentication:** JWT for secure login<br>
+**Hosting:** Github and Vercel for frontend , AWS fro backend<br>
 
 ## C4 Diagrams
 
