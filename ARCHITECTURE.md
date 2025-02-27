@@ -1,16 +1,16 @@
-## Project Title: Smart Attendance Sysytem
+# Smart Attendance System - Architecture  
 
-## Overview:
+## 1. System Overview  
+The **Smart Attendance System** allows students to mark attendance using facial recognition or QR codes while providing real-time tracking for teachers and administrators.  
 
-The system allows both students and lectures to mark their presence using QR code or facial recognision while providing real-time tracking that can be viewed by students, lectures as well as the administrations.
+### **Technology Stack**  
+- **Frontend:** HTML, CSS, JavaScript (React)  
+- **Backend:** Node.js (Express.js)  
+- **Database:** MySQL  
+- **Authentication:** JWT for secure login  
+- **Hosting:** GitHub & Vercel for frontend, AWS for backend  
 
-Technology behind:
-
-**Frontend:** HTML, CSS, JavaScript(React and React Native)<br>
-**Backend:** Node.js <br>
-**Database:** MySQL <br>
-**Authentication:** JWT for secure login<br>
-**Hosting:** Github and Vercel for frontend , AWS fro backend<br>
+---
 
 ## 2. C4 Diagrams  
 
