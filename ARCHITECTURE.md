@@ -1,7 +1,7 @@
 # 🏫 Smart Attendance System - Architecture  
 
 ## 1️⃣ System Overview  
-The **Smart Attendance System** is designed to automate student attendance tracking using **QR codes** and **Facial Recognition**.  
+The **Smart Attendance System** automates student attendance tracking using **QR codes** and **Facial Recognition**.  
 It ensures **real-time attendance monitoring**, reduces fraud, and provides comprehensive attendance reports.  
 
 ### **📌 Technology Stack**  
@@ -13,24 +13,27 @@ It ensures **real-time attendance monitoring**, reduces fraud, and provides comp
 
 ---
 
-## **2️⃣ System Diagrams**  
-
-### **🌐 Context Diagram**  
-Shows how different users interact with the system.  
+## **2️⃣ System Architecture Diagram**  
 
 ```mermaid
-graph TD;
-  A[Student] -->|Scans QR Code / Face ID| B(Smart Attendance System);
-  C[Teacher] -->|Views Attendance Logs| B;
-  D[Admin] -->|Manages Student Records| B;
-graph TD;
-  A[Student] -->|Uses Web App| B[Frontend (React)];
-  B -->|Sends API Requests| C[Backend (Node.js)];
-  C -->|Stores & Retrieves Data| D[MySQL Database];
-  E[Teacher] -->|Views Reports| B;
-  F[Admin] -->|Manages Students| B;
-graph TD;
-  A[API Controller] -->|Handles HTTP Requests| B[Auth Service];
-  A -->|Processes Attendance Data| C[Attendance Service];
-  C -->|Stores Data| D[Database Connector];
-  B -->|Validates Users| D;
+graph TD
+  %% Context Diagram
+  A[Student] -->|Scans QR Code / Face ID| B(Smart Attendance System)
+  C[Teacher] -->|Views Attendance Logs| B
+  D[Admin] -->|Manages Student Records| B
+
+  %% Container Diagram
+  subgraph System Components
+    B1[Frontend (React)] -->|Sends API Requests| B2[Backend (Node.js)]
+    B2 -->|Stores & Retrieves Data| B3[MySQL Database]
+    E[Teacher] -->|Views Reports| B1
+    F[Admin] -->|Manages Students| B1
+  end
+
+  %% Component Diagram
+  subgraph Backend Services
+    C1[API Controller] -->|Handles HTTP Requests| C2[Auth Service]
+    C1 -->|Processes Attendance Data| C3[Attendance Service]
+    C3 -->|Stores Data| C4[Database Connector]
+    C2 -->|Validates Users| C4
+  end
