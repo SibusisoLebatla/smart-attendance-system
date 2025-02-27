@@ -12,9 +12,12 @@ Technology behind:
 **Authentication:** JWT for secure login<br>
 **Hosting:** Github and Vercel for frontend , AWS fro backend<br>
 
-## C4 Diagrams
+## 2. C4 Diagrams  
 
- Showing the different usage of the system from the perspective of Students, Lectures and Administrators.
+### **2.1 Context Diagram**  
+The **Context Diagram** shows how different users interact with the system.  
+
+```mermaid
 
 **C4Context**
   title Smart Attendance System - Context Diagram
