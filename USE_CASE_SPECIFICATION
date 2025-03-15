@@ -1,0 +1,134 @@
+# Use Case Specifications
+
+This document outlines the use case specifications for the Smart Attendance System. Each use case describes how the system interacts with different stakeholders to fulfill their needs.
+
+## Use Case 1: Register Attendance  
+**Actor**: Student  
+**Description**: Allows students to register their attendance using the system.  
+**Preconditions**: The student must be logged in.  
+**Postconditions**: Attendance is recorded in the system.  
+
+**Basic Flow**:  
+1. Student logs into the system.  
+2. Student selects "Register Attendance".  
+3. System records the attendance timestamp.  
+4. System confirms successful attendance registration.  
+
+**Alternative Flow**:  
+- **If student is not enrolled in the class**: The system shows an error message.  
+
+---
+
+## Use Case 2: View Attendance History  
+**Actor**: Student  
+**Description**: Allows students to view past attendance records.  
+**Preconditions**: The student must be logged in.  
+**Postconditions**: Attendance records are displayed.  
+
+**Basic Flow**:  
+1. Student logs into the system.  
+2. Student selects "View Attendance".  
+3. System retrieves and displays past attendance records.  
+
+**Alternative Flow**:  
+- **If no records are found**: System displays "No attendance records available".  
+
+---
+
+## Use Case 3: Generate Reports  
+**Actor**: Admin  
+**Description**: Allows the admin to generate attendance reports.  
+**Preconditions**: Admin must be logged in.  
+**Postconditions**: System generates a report.  
+
+**Basic Flow**:  
+1. Admin logs into the system.  
+2. Admin selects "Generate Report".  
+3. System processes and generates a report.  
+
+**Alternative Flow**:  
+- **If no attendance data exists**: System shows an error message.  
+
+---
+
+## Use Case 4: Manage Users  
+**Actor**: Admin  
+**Description**: Allows the admin to add, update, or remove students and staff.  
+**Preconditions**: Admin must be logged in.  
+**Postconditions**: User list is updated.  
+
+**Basic Flow**:  
+1. Admin logs into the system.  
+2. Admin selects "Manage Users".  
+3. Admin can add, edit, or remove a user.  
+4. System updates the user database.  
+
+**Alternative Flow**:  
+- **If required fields are missing**: System displays an error message.  
+
+---
+
+## Use Case 5: Send Notifications  
+**Actor**: Admin, Teacher  
+**Description**: Allows the system to send attendance reminders or alerts.  
+**Preconditions**: The recipient must be a registered user.  
+**Postconditions**: Notification is sent.  
+
+**Basic Flow**:  
+1. Admin or teacher selects "Send Notification".  
+2. They enter the message and choose recipients.  
+3. System sends the notification.  
+
+**Alternative Flow**:  
+- **If recipient is not found**: System displays an error.  
+
+---
+
+## Use Case 6: Verify Student Identity  
+**Actor**: System  
+**Description**: Ensures that a student is present by verifying their identity.  
+**Preconditions**: Student must provide verification details.  
+**Postconditions**: Attendance is confirmed or denied.  
+
+**Basic Flow**:  
+1. Student provides fingerprint/face scan.  
+2. System verifies the identity.  
+3. If verified, attendance is marked.  
+
+**Alternative Flow**:  
+- **If verification fails**: System prompts student to retry or report to admin.  
+
+---
+
+## Use Case 7: Export Attendance Data  
+**Actor**: Admin  
+**Description**: Allows the admin to export attendance records.  
+**Preconditions**: Admin must be logged in.  
+**Postconditions**: Attendance data is exported.  
+
+**Basic Flow**:  
+1. Admin selects "Export Attendance Data".  
+2. Admin chooses the format (CSV, PDF).  
+3. System generates the export file.  
+4. System confirms export completion.  
+
+**Alternative Flow**:  
+- **If no data is available**: System shows an error message.  
+
+---
+
+## Use Case 8: Reset Password  
+**Actor**: Student, Teacher, Admin  
+**Description**: Allows users to reset their passwords.  
+**Preconditions**: User must have a registered email.  
+**Postconditions**: Password is successfully reset.  
+
+**Basic Flow**:  
+1. User selects "Forgot Password".  
+2. System prompts user to enter their email.  
+3. System sends a password reset link.  
+4. User follows the link and resets the password.  
+5. System updates the password.  
+
+**Alternative Flow**:  
+- **If email is not registered**: System shows an error message.  
