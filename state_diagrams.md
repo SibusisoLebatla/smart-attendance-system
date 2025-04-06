@@ -10,5 +10,15 @@ stateDiagram-v2
     CheckedOut --> Lost : Reported as lost
     Reserved --> Available : Reservation cancelled
 
+Explanation:
+Key States: Available, Reserved, CheckedOut, Returned, Lost
 
-
+        Transitions: Triggered by user actions such as reservation, checkout, and return.
+        
+        Requirement Mapping:
+        
+        FR-001: Book must be searchable and show availability.
+        
+        FR-004: Allow checkout and return of books.
+        
+        FR-005: Allow users to cancel reservations.
