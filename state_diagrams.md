@@ -1,3 +1,5 @@
+```mermaid
+
 Book
 stateDiagram-v2
     [*] --> Available
